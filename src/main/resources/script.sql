@@ -1,3 +1,7 @@
+DROP DATABASE IF EXISTS Tienda;
+CREATE DATABASE Tienda;
+USE Tienda;
+
 CREATE TABLE cliente (
     id_cliente INT NOT NULL AUTO_INCREMENT,
     nombre VARCHAR(100),
@@ -8,7 +12,7 @@ CREATE TABLE cliente (
 CREATE TABLE producto (
     id_producto INT NOT NULL AUTO_INCREMENT,
     nombre VARCHAR(100),
-    precio INT,
+    precio DECIMAL(10, 2),
     PRIMARY KEY (id_producto)
 );
 
