@@ -1,5 +1,6 @@
 package com.example.Tienda.Controller;
 
+import com.example.Tienda.Model.ProductoModel;
 import com.example.Tienda.Model.VentaModel;
 import com.example.Tienda.Service.VentaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,5 +29,11 @@ public class VentaController {
     @DeleteMapping(path = "/{id}")
     public String eliminar(@PathVariable("id") int id) {
         return vs.eliminarVentaPorID(id);
+    }
+
+    @PostMapping(path = "/guardar")
+    public VentaModel guardarVentas(@RequestBody VentaModel ventaModel) {
+        return vs.guardarVenta(ventaModel);
+
     }
 }

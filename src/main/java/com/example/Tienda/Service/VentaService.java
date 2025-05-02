@@ -20,7 +20,10 @@ public class VentaService {
         return v1;
     }
 
-
+public VentaModel guardarVenta(VentaModel ventaModel) {
+        VentaModel venta = vr.save(ventaModel);
+        return venta;
+}
 
 
     public ArrayList<VentaModel> mostrarVentas() {
